@@ -1,6 +1,4 @@
 from peewee import *
-import argparse
-import sys
 
 db = PostgresqlDatabase('notes', 
                         user='ca', 
