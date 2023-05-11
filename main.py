@@ -22,7 +22,6 @@ class Note(BaseModel):
 def note_taker():
     db.create_tables([Note])
     user_input = input('Welcome to Note Taker! What would you like to do?\nCreate a note (type: create),\nUpdate a note (type: update),\nDelete a note (type: delete),\nView all notes (type: view)\nor exit (type: exit)?:\n')
-    # user_input2 = input('What else would you like to do while here?\ncreate, update, delete, view, or exit?:\n')
     if user_input.lower() == 'create':
         note_title = input('Note Title: ')
         note_contents = input('Note Contents: ')
@@ -77,27 +76,3 @@ note_taker()
 
 
 # db.drop_tables([Note])
-# db.create_tables([Note])
-
-# sys.arg[1]
-
-# note_title = input('Note Title: ')
-# note_contents = input('Note Contents: ')
-# note1 = Note(title= f'{note_title}', contents= f'{note_contents}')
-# note1.save()
-
-# note1 = Note(note_title= f'{sys.argv[1]}', note_contents= f'{sys.argv[2]}')
-# note1.save()
-
-# note_finder = input('Which note would you like to view? Please input the title of the note below.\n')
-
-# list_of_notes = Note.select()
-# print([notes.contents for notes in list_of_notes])
-
-# note_lookup = Note.select().where(Note.title == f'{note_finder}')
-# print([note.contents for note in note_lookup])
-
-# list_of_notes = Note.select()
-# print([notes.contents for notes in list_of_notes])
-# print([notes.contents for notes in list_of_notes])
-
