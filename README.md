@@ -19,7 +19,7 @@ pipenv install
 ```
 pipenv shell
 ```
-4. Once inside the shell envirnment run the below command to start the Note Taker app:
+4. Once inside the shell environment run the below command to start the Note Taker app:
 ```
 python3 main.py
 ```
