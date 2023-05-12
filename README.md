@@ -4,7 +4,7 @@ Welcome to note taker! Your virtual note taker in the command line. I coded this
 - [Psycopg2](https://www.psycopg.org/docs/)
 - [Autopep8](https://pypi.org/project/autopep8/)
 
-I'm also using SQL as the database which is storing all the notes created!
+I'm also using [PostgreSQL](https://www.postgresql.org/) as the database which is storing all the notes created!
 
 You can create new notes, update your note, view all notes, and delete your notes right within the command line.
 
@@ -31,3 +31,4 @@ python3 main.py
 - [Autopep8](https://pypi.org/project/autopep8/)
 - [Python](https://docs.python.org/3/)
 - [Pipenv](https://pipenv.pypa.io/en/latest/)
+- [PostgreSQL](https://www.postgresql.org/)
