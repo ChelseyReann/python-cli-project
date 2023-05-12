@@ -36,14 +36,18 @@ def note_taker():
             note_update_detail = input("Do you want to edit the title or the content?\n").lower()
             if note_update_detail == 'title':
                 note_update_title = input("What would you like the title to be instead?\n")
+                note_update = note_update.get()
                 note_update.title = note_update_title
                 print('--Thanks! Your note title has been updated!--')
                 note_update.save()
             elif note_update_detail == 'content':
                 note_update_contents = input("What would you like the contents to be instead?\n")
+                note_update = note_update.get()
                 note_update.contents = note_update_contents
-                print('--Thanks! Your note contents have been updated!--')
                 note_update.save()
+                print('--Thanks! Your note contents have been updated!--')
+            else:
+                print('---Please input the proper value!---')
         else:
             print('---Please input the proper value!---')
         note_taker()
@@ -51,8 +55,8 @@ def note_taker():
         list_of_notes = Note.select()
         print([notes.title for notes in list_of_notes])
         note_delete_input = input("Please input the title of the note that you would like to delete:\n").lower()
-        note_delete = Note.select().where(fn.lower(Note.title) == note_delete_input)
-        if note_delete.exists():
+        note_delete = Note.get_or_none(fn.lower(Note.title) == note_delete_input)
+        if note_delete:
             note_delete.delete_instance()
             print('--Your note has been deleted!--')
         else:
